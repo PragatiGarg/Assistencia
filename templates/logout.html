@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Assistencia</title>
+ 
+ 
+    <link href="/static/css2.css" rel="stylesheet">
+ 
+    <link href="/static/css1.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="homepage.html">Home</a>
+                    </li>
+                    <li role="presentation"><a href="logout.html">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Assistencia</h3>
+        </div>
+        <div class="jumbotron"  onclick="Myfunction">
+            <h1>Assistencia</h1>
+            <p class="lead"></p>
+           <input class="btn btn-lg btn-success" type = "button" transition="all 0.5s" onclick="password1()" name = "signout" value ="Sign out" style="float:center;border-radius:3px">
+
+            </p>
+        </div>
+
+
+
+ 
+        <footer class="footer">
+            <p>&copy; R.A.P 2015</p>
+        </footer>
+ 
+    </div>
+	<script>
+		
+		function password1()
+		{
+		var answer = confirm("Do you really want to Sign out??")
+			if (answer){		
+				alert ( "You have succesfully Signed out")
+				window.location="\homepage.html";
+				}
+			else{
+				 window.location.reload(true);
+				}
+		}
+	</script>
+</body>
+ <script>
+
+</html>

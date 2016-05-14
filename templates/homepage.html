@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Assistencia</title>
+ 
+ 
+    <link href="/static/css1.css" rel="stylesheet">
+ 
+    <link href="/static/css2.css" rel="stylesheet">
+	
+ 
+</head>
+ 
+<body>
+	{% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="\login">Login</a>
+                    </li>
+                    <li role="presentation"><a href="\register">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Assistencia</h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h1>Assistencia</h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="\register" role="button">Register</a>
+            </p>
+        </div>
+		<footer class="footer">
+            <p>&copy; R.A.P 2015</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

@@ -1,0 +1,142 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<style>
+			  .select-editable { position:relative; background-color:transparent; border:solid grey 1px; border-radius:3px; width:120px; height:18px; }
+				  .select-editable select { position:absolute; background-color:transparent; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+				  .select-editable input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; }
+				  .select-editable select:focus, .select-editable input:focus { background-color:transparent;outline:none; }
+				
+		</style>
+	  <link href="/static/css1.css" rel="stylesheet">
+ 
+    <link href="/static/css2.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+	{% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="\">Home</a>
+                    </li>
+                    <li role="presentation"><a href="\login">login</a>
+                    </li>
+                    <li role="presentation"><a href="\register">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Assistencia</h3>
+        
+</div>
+	
+				 <div class="jumbotron">
+				<form name="myForm" action = "" method="POST" onsubmit="myFunction()" >
+						<table align=center >
+							<tr>
+								<th style="text-align:center ;padding: 15px;font-size:200%"colspan="5"><p>Register For Teacher</p></th>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Name</td>
+								<td style="text-align:left;padding: 15px"><input type = "text" style="border-radius:3px" name ="name"placeholder="Name" required value="{{ request.form.name }}"></td>
+							</tr>
+							<tr>
+								<td style="text-align:right;padding: 15px">Employee_id</td>
+								<td style="text-align:left;padding: 15px"><input type = "text" style="border-radius:3px" name ="prn"placeholder="Employee_id"required value="{{ request.form.prn }}"></td>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Email_id</td>
+								<td style="text-align:left;padding: 15px"><input type = "email" style="border-radius:3px" name ="email"placeholder="Email_id"required value="{{ request.form.email }}"></td>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Authorisation Key</td>
+								<td style="text-align:left;padding: 15px"><input type = "password" name ="akey"  placeholder="Authorisation Key" style="border-radius:3px" required required value="{{ request.form.akey }}"></td>
+							</tr>
+						<!--	<tr>
+								
+											<td>
+											<div class="select-editable">
+													<select  class="ui dropdown">
+													  <option value="">Course</option>
+													  <option value="1">Mt</option>
+													  <option value="0">Os</option>
+													  <option value="0">se</option>
+													  <option value="0">maths</option>
+													  <option value="0">jwt</option>
+													</select>
+													</div>
+														
+							
+							</tr>	        -->
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Enter New Password</td>
+								<td style="text-align:left;padding: 15px"><input type = "password" name ="password"  placeholder="New Password" style="border-radius:3px" required value="{{ request.form.password }}"></td>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Confirm New Password</td>
+								<td style="text-align:left;padding: 15px"><input type = "password" name ="Cpassword"  placeholder="Confirm Password" style="border-radius:3px" required value="{{ request.form.Cpassword }}"></td>
+										 <td colspan = 2>
+											<center>
+											<textArea id="xyz" name = "txtOutput"
+													  rows = 1
+													  cols = 35
+													 style="display:none"
+													  >ugkulg
+											</textarea>
+											</center>
+										  </td>
+																	
+							</tr>
+							<tr>
+									<td style="text-align:center;padding: 15px ;"colspan="2"><input class="btn btn-lg btn-success" type = "submit" name = "Register" value ="Register" style="float:center;border-radius:5px; font-size:18px"></td>
+							</tr>
+							
+							
+						</table>
+						
+  					
+				</form>
+		</div>
+		 <footer class="footer">
+        <p>&copy; R.A.P 2015</p>
+      </footer>	
+<script>
+
+function validateForm() {
+   var guess = document.myForm.Password.value;
+  var secret = document.myForm.CPassword.value;
+ 
+  if (guess == secret){
+    document.myForm.txtOutput.value = "You may proceed.";
+	
+  } else {
+    document.myForm.txtOutput.value = "That is incorrect.";
+  }
+   document.getElementById('xyz').style.visibility = "visible"
+}
+</script>
+
+	</body>
+</html>
+
+
+
+

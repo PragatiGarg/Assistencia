@@ -1,0 +1,93 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Assistenciaencia</title>
+	
+ 
+ 
+    <link href="/static/css1.css" rel="stylesheet">
+ 
+    <link href="/static/css2.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+	 {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="\">Home</a>
+                    </li>
+                    <li role="presentation"><a href="#">Login</a>
+                    </li>
+                    <li role="presentation"><a href="\register">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Assistencia</h3>
+            </div>
+			 <div class="jumbotron">
+				<form  action = "/login" method="POST" >
+						<table align=center >
+							<tr>
+								<th style="text-align:center ;padding: 15px;font-size:200%"colspan="2"><p>Login</p></th>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">User id</td>
+								<td style="text-align:left;padding: 15px"><input type = "email"  style="border-radius:3px " name ="UserName"placeholder="email"  required value="{{ request.form.UserName }}"></td>
+							</tr>
+							
+							<tr>
+								<td style="text-align:right;padding: 15px">Password</td>
+								<td style="text-align:left;padding: 15px"><input type = "password" name ="Password" maxlength = "25" placeholder="password" style="border-radius:3px" required value="{{ request.form.Password }}"></td>
+							</tr>
+
+							<tr>
+								<td style="text-align:right;padding: 15px "><input type="radio" name="login" value="Teacher"required>Teacher</td>
+								<td style="text-align:right;padding: 15px "><input type="radio" name="login" value="Student"required>Student</td>
+							</tr>
+							
+							<tr>
+									<td style="text-align:center;padding: 15px ;"colspan="2"><input class="btn btn-lg btn-success" type = "submit" name = "Login" value ="Login" style="float:center;border-radius:3px"></td>
+							</tr>
+							<tr>
+									<td  style="text-align:center;padding:15px"colspan="2"><input class="btn btn-lg btn-success" type="button" onclick="password()"  href="" style="color:white; border-radius:3px" value="Forgot Password?"</td>
+							</tr>
+							
+						</table>
+						
+						
+				</form>
+				</div>
+		   <footer class="footer">
+        <p>&copy; R.A.P 2015</p>
+      </footer>
+<script>
+function myFunction() {
+    window.alert("your form is submitted");
+}
+function password()
+{
+var email_id = prompt("Enter your email id", "")				
+	alert ( "Your password has been sent at :-" +email_id)
+}
+</script>
+
+	</body>
+</html>
+
+
+
+

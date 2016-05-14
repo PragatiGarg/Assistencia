@@ -1,0 +1,92 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Assistencia</title>
+		<style>
+		
+				  .select-editable { position:relative; background-color:transparent; border:solid grey 1px; border-radius:3px; width:120px; height:18px; }
+				  .select-editable select { position:absolute; background-color:transparent; top:0px; left:0px; font-size:14px; border:none; width:120px; margin:0; }
+				  .select-editable input { position:absolute; top:0px; left:0px; width:100px; padding:1px; font-size:12px; border:none; }
+				  .select-editable select:focus, .select-editable input:focus { background-color:transparent;outline:none; }
+				
+		</style>
+		<head>
+  
+ 
+ 
+    <link href="/static/css2.css" rel="stylesheet">
+ 
+    <link href="/static/css1.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="homepage.html">Home</a>
+                    </li>
+                    <li role="presentation"><a href="logout.html">Logout</a>
+                    </li>
+             
+                </ul>
+            </nav>
+            <h3 class="text-muted">{{ prn }}</h3>			
+            </div>
+			<div class="jumbotron" >
+			<h1><b>{{ name }}<h1>
+			<table width="100%">
+			<tr>
+			<td><h2 style="color:#337ab7"><b>Total attendance<h2>
+			<td ><h3 style="color:#5cb85c"><b>{{ data[0] }}%</b><h3>
+			</tr>
+			<tr>
+			<td><h3>Operating System<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[2] }}%<h4>
+			</tr>
+			<tr>
+			<td><h3>Microprocessor Techniques<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[6] }}%<h4>
+			</tr>
+			<tr>
+			<td><h3>Engineering Mathematics III<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[4] }}%<h4>
+			</tr>
+			<tr>
+			<td><h3>Data Structure<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[1] }}%<h4>
+			</tr>
+			<tr>
+			<td><h3>Software Engineering<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[3] }}%<h4>
+			</tr>
+			<tr>
+			<td><h3>Java and Web Technologies<h3>
+			<td ><h4 style="color:#5cb85c">{{ data[5] }}%<h4>
+			</tr>
+			</table>
+			<h2 style="color:#337ab7"><b>Attendometer</b><h2>
+				  <div class="progress">
+					<div class="progress-bar progress-bar-success" role="progressbar" style="width:{{ data2[0] }}%">
+					  Safe
+					</div>
+					<div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{ data2[2] }}%">
+					  Danger
+					</div>
+					<div class="progress-bar progress-bar-warning" role="progressbar" style="width:{{ data2[1] }}%">
+					</div>
+					
+				  </div>
+				    <footer class="footer">
+        <p>&copy; R.A.P 2015</p>
+      </footer>
+				</div>
+			
+			<tr>
+			<table>
+
+		
